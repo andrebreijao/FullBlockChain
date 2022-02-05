@@ -8,12 +8,10 @@ class Block {
     this.data = data;
     this.hash = hash;
   }
-
   static genesis() {
     // return new Block(GENESIS_DATA);
     return new this(GENESIS_DATA);
   }
-
   static minedBlock({ lastBlock, data }) {
     const timeStamp = Date.now();
     const lastHash = lastBlock.hash;

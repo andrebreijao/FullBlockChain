@@ -18,4 +18,24 @@ describe("Blockchain", () => {
     blockChain.addBlock({ data: newData });
     expect(blockChain.chain[blockChain.chain.length - 1].data).toEqual(newData);
   });
+
+  describe("isValidChain()", () => {
+    describe("when a chain does not starts with the genesis block", () => {
+      it("returns false", () => {});
+    });
+
+    describe("when a chain starts with the genesis block and has multiple blocks", () => {
+      describe("and a lastHash reference has changed", () => {
+        it("returns false", () => {});
+      });
+
+      describe("and the chain contains a block with an invalid field", () => {
+        it("returns false", () => {});
+      });
+
+      describe("and the chain does not contains any invalid block", () => {
+        it("returns true", () => {});
+      });
+    });
+  });
 });
